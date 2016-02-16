@@ -35,7 +35,6 @@ game = Canvas(tk, width=500, height=400, bd=0, highlightthickness=0)
 game.pack()
 tk.update()
 
-
 ball = Ball(game, 'red')
 
 while 1:
