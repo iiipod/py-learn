@@ -109,9 +109,9 @@ class PlatformSprite(Sprite):
         self.coordinates = Coords(x, y, x + width, y + height)
 
 ### Test ###
-c1 = Coords(40, 40, 100, 100)
-c2 = Coords(50, 50, 150, 150)
-print within_x(c1, c2)
+#c1 = Coords(40, 40, 100, 100)
+#c2 = Coords(50, 50, 150, 150)
+#print within_x(c1, c2)
 
 g = Game()
 platform1 = PlatformSprite(g, PhotoImage(file="15_image/platform1.gif"), 0, 480, 100, 10)
