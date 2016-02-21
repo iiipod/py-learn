@@ -86,8 +86,7 @@ def collided_bottom(y, co1, co2):
         y_calc = co1.y2 + y
         if y_calc >= co2.y1 and y_calc <=co2.y2:
             return True
-    else:
-        return False
+    return False
 
 class Sprite:
     def __init__(self, game):
