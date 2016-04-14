@@ -1,5 +1,5 @@
 import urllib2
-import requests
+#import requests
 import csv
 import os
 import re
@@ -16,16 +16,25 @@ field_order = ['date', 'context']
 fields = {'title' : 'Title',
           'context' : 'Context'}
 
+#html ="""
+#<html><head><title>The Dormouse's story</title></head>
+#<body>
+#<p class="title" name="dromouse"><b>The Dormouse's story</b></p>
+#<p class="story">Once upon a time there were three little sisters; and their names were
+#<a href="http://example.com/elsie" class="sister" id="link1"><!-- Elsie --></a>,
+#<a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and
+#<a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>;
+#and they lived at the bottom of a well.</p>
+#<p class="story">...</p>
+#"""
+
 def find_quota_section(html):
     soup = BeautifulSoup(html)
-    title = soup.findAll('div', attrs={'class': 'bg_htit'})
+    print soup.title.string
 
+    print type(soup.findAll('div' ,{'class' : 'bg_htit'}))
 
-    for line in title:
-        pattern = re.compile('[a-zA-Z]')
-        title_line = pattern.findall('>.+<', line)
-        print title_line
-#    context = soup.findAll('div',attrs={'class': 'p_mainnew'})
+#    print type(soup.findAll('div',attrs={'class': 'p_mainnew'}))
 #    print context
 
 def write_csv():
@@ -45,5 +54,5 @@ def write_csv():
 
 if __name__ == '__main__':
     html = get_solidot()
-    print find_quota_section(html)
+    find_quota_section(html)
 
