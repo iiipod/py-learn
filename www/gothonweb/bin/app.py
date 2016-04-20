@@ -16,6 +16,7 @@ render = web.template.render('templates/', base="layout")
 
 class Index:
     def GET(self):
+        form = web.input(name="Nobody")
         return render.hello_form()
 
     def POST(self):
