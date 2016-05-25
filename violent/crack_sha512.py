@@ -43,6 +43,7 @@ def main():
                 #print user_hash
             except:
                 continue
+
             crackPass(shadow, user_salt, dname)
 
 if __name__ == "__main__":
